@@ -4,10 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="style.css">
+    <title>David Olžbut xolzd001</title>
+    <style>
+        h1 {
+            display: inline;
+        }
+        h1, a, footer, .mainpage {
+            border: 2px red solid;
+            padding: 10px;
+            margin-left: 10px;
+        }
+        .container{
+            margin-top: 20px;
+        }
+        .image {
+            max-width:00px;
+            float: left;
+        }
+        .footer {
+            clear: both;
+        }
+        @media (min-width: 503px) {
+            h1, a, footer, .mainpage {
+                border-radius: 10px;
+            }
+        }
+        @media (max-width: 502px) {
+            img, div#top a, p { display: none; }
+            .mainpage div a { display: block; }
+            .mainpage form { }
+        }
+    </style>
 </head>
 <body>
-<script src="index.js"></script>
+
+<nav class="navigace">
+    <h1>XOLZD001</h1>
+    <a href="#">Menu 1</a>
+    <a href="#">Menu 2</a>
+    <a href="#">Menu 3</a>
+</nav>
+
+<main class="mainpage" class="container">
+    <img src="https://i.imgflip.com/4hzna9.jpg" class="image">
+    <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Maecenas sollicitudin. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Etiam posuere lacus quis dolor. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Mauris metus. Fusce wisi. In rutrum. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Duis risus.
+    </p>
+    <form>
+        <label for="jmeno">Jméno: </label><input id="jmeno">
+        <label for="email">E-mail: </label><input id="email">
+    </form>
+    <div>
+        <a href="./">Odkaz 1</a>
+        <a href="./">Odkaz 2</a>
+        <a href="./">Odkaz 3</a>
+    </div>
+</main>
+<footer>
+    Zápatí
+</footer>
+
+<form>
+    <label for="telefon">Telefon:</label><br>
+    <input type="text" id="telefon" name="telefon"><br>
+    <button type="button" onclick="number_check()" class="btn btn-default">OK</button>
+</form>
+
+<script>
+    function number_check() {
+        var num = document.getElementById("telefon").value;
+        var regex = /^\d{9}$/;
+
+        if (regex.test(num)) {
+            alert("OK!");
+        } else {
+            alert("error");
+        }
+    }
+</script>
 </body>
 </html>
